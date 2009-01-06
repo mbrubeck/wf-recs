@@ -3,7 +3,7 @@ About
 
 Ted Gould's post about [transcoding music files using Make][1] got me thinking
 about combining Make and [RecordStream][3] into a barebones [MapReduce][2]
-framework.  As a demonstration, I wrote a simple solution to Tim Bray's [Wide
+framework.  As a demonstration, I wrote a partial solution to Tim Bray's [Wide
 Finder][6] challenge, to calculate hit counts from web server logs.
 
 RecordStream (also known as "recs") is a collection of Unix tools for
@@ -44,8 +44,7 @@ the Makefile, we get some nice features for free:
 Here's my [source code][7]: 16 line of code, not counting comments or blank
 lines.  It's not as fast as any of the heavily-optimized versions, but it
 demonstrates a practical way to do parallel data processing with very little
-effort.  Eric Wong's [Wide Finder 2 entry][9] also used Make, although his
-code is currently unavailable.
+effort.
 
 Instructions
 ============
@@ -60,6 +59,18 @@ Instructions
 
 Exercise for the reader:  Integrate this with a distributed Make program, to
 make it run across multiple computers on a network.
+
+Notes
+=====
+
+The sample data in the `data` directory are the 10,000-line
+<http://www.tbray.org/tmp/o10k.ap>, split into ten files.  I wimped out and
+did not include file-splitting in the code itself.
+
+Eric Wong's [Wide Finder 2 entry][9] also used Make, although his
+code is currently unavailable.
+
+
 
 [1]: http://gould.cx/ted/blog/Where_music_is_going
 [2]: http://en.wikipedia.org/wiki/MapReduce
