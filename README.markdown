@@ -41,11 +41,11 @@ the Makefile, we get some nice features for free:
 4. You can kill the process at any point and later restart it near where it
    stopped&mdash;or even migrate it to another machine.
 
-As far as I know, these four features are unique to my solution, among all
-those on Tim Bray's page.  It's not as fast as any of the heavily-optimized
-versions, but it demonstrates a practical way to do parallel data processing
-with very little effort.  Here's my [source code][7]: 16 line of code, not
-counting comments or blank lines.
+Here's my [source code][7]: 16 line of code, not counting comments or blank
+lines.  It's not as fast as any of the heavily-optimized versions, but it
+demonstrates a practical way to do parallel data processing with very little
+effort.  Eric Wong's [Wide Finder 2 entry][9] also used Make, although his
+code is currently unavailable.
 
 Instructions
 ============
@@ -69,3 +69,4 @@ make it run across multiple computers on a network.
 [6]: http://www.tbray.org/ongoing/When/200x/2007/09/20/Wide-Finder
 [7]: Makefile
 [8]: http://code.google.com/p/recordstream/source/checkout
+[9]: http://groups.google.com/group/wide-finder/browse_thread/thread/10b3cc5d3d10e384/fcb8c1ce2f5ef480
